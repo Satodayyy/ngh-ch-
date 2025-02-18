@@ -16,9 +16,10 @@ function openGift() {
 }
 
         function createConfetti() {
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < 200; i++) {
         let confetti = document.createElement("div");
         confetti.className = "confetti";
+
         confetti.style.left = Math.random() * window.innerWidth + "px";
         confetti.style.width = Math.random() * 6 + 4 + "px";
         confetti.style.height = confetti.style.width;
@@ -31,11 +32,14 @@ function openGift() {
         confetti.style.top = -Math.random() * 100 + "vh";
         document.body.appendChild(confetti);
         
-        setTimeout(() => confetti.remove(), 5000);
+       setTimeout(() => confetti.remove(), 15000);  
+       
     }
 }
+
+
 function typeText() {
-    let text = "Chúc bạn có một ngày 8/3 tràn ngập niềm vui và hạnh phúc! 💖";
+    let text = "Chúc tất cả những người phụ nữ tuyệt vời một ngày tràn ngập niềm vui, tiếng cười và hạnh phúc! Bạn là những bông hoa rực rỡ nhất, mạnh mẽ nhưng cũng đầy dịu dàng, luôn mang đến sự yêu thương và ấm áp cho thế giới này. Hãy luôn tự tin, tỏa sáng và yêu thương chính mình! Mỗi ngày trôi qua, bạn đều xứng đáng nhận được những điều tuyệt vời nhất.";
     let index = 0;
     let typingText = document.getElementById("typing-text");
 
@@ -54,5 +58,5 @@ function typeText() {
             clearInterval(window.typingInterval);
             typingText.classList.remove("typing"); 
         }
-    }, 70);
+    }, 50);
 }
